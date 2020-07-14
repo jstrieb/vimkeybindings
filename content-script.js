@@ -51,10 +51,18 @@ const commands = {
     });
   },
   cmd_scrollFileBottom: function() {
-    window.scrollTo(window.scrollX, document.body.scrollHeight);
+    window.scrollTo({
+      left: window.scrollX,
+      top: document.body.scrollHeight,
+      behavior: "smooth"
+    });
   },
   cmd_scrollFileTop: function() {
-    window.scrollTo(window.scrollX, 0);
+    window.scrollTo({
+      left: window.scrollX,
+      top: 0,
+      behavior: "smooth"
+    });
   },
   cmd_activateNextTab: function (repetition) {
     browser.runtime.sendMessage({
