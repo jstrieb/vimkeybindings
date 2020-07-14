@@ -1,7 +1,6 @@
 # Firefox extension with a few vi(m) keybindings.
 
-* [Install](https://addons.mozilla.org/en-US/firefox/addon/vimkeybindings/)
-* [Source on Github](https://github.com/autonome/vimkeybindings)
+Modified by Jacob Strieb.
 
 ## Supported Commands
 
@@ -19,8 +18,9 @@ Commands can be repeated as in vim. Example: 50j will scroll down 50 lines.
 
 ## Credits
 
-* Originally by the author of [this O'Reilly post](http://www.oreillynet.com/linux/blog/2006/04/firefox_with_vim_keybindings.html)
+* Originally by the author of [this O'Reilly
+  post](http://www.oreillynet.com/linux/blog/2006/04/firefox_with_vim_keybindings.html)
 * Packaged by Arno, a commenter there
-* Updated and repackaged by me on AMO
 * Documented by Christopher Svec
-* Rewritten from scratch with the WebExtensions API for Firefox 53 and after (and a few before) by me
+* Rewritten from scratch with the WebExtensions API for Firefox 53 and after
+  (and a few before) by me
