@@ -21,12 +21,3 @@ It is only available on this page, not on the Firefox add-on store.
 * {n}gt : go to the nth tab
 
 Commands can be repeated as in vim. Example: 50j will scroll down 50 lines.
-
-## Credits
-
-* Originally by the author of [this O'Reilly
-  post](http://www.oreillynet.com/linux/blog/2006/04/firefox_with_vim_keybindings.html)
-* Packaged by Arno, a commenter there
-* Documented by Christopher Svec
-* Rewritten from scratch with the WebExtensions API for Firefox 53 and after
-  (and a few before) by me
