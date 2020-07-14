@@ -1,7 +1,5 @@
-
-const SCROLL_LINE_COUNT = 1;
-
-const SCROLL_HORIZONTAL_PIXELS = 5;
+const SCROLL_VERTICAL_PIXELS = 200;
+const SCROLL_HORIZONTAL_PIXELS = 200;
 
 const actions = [
   { keyCombination: 'h', command: 'cmd_scrollLeft' },
@@ -23,22 +21,34 @@ const commands = {
   cmd_scrollLeft: function(repetition) {
     const repeat = repetition == "" ? 1 : +repetition;
 
-    document.body.scrollLeft -= SCROLL_HORIZONTAL_PIXELS * repeat;
+    window.scrollBy({
+      left: -SCROLL_HORIZONTAL_PIXELS * repeat,
+      behavior: "smooth"
+    });
   },
   cmd_scrollRight: function(repetition) {
     const repeat = repetition == "" ? 1 : +repetition;
 
-    document.body.scrollLeft += SCROLL_HORIZONTAL_PIXELS * repeat;
+    window.scrollBy({
+      left: SCROLL_HORIZONTAL_PIXELS * repeat,
+      behavior: "smooth"
+    });
   },
   cmd_scrollLineDown: function(repetition) {
     const repeat = repetition == "" ? 1 : +repetition;
 
-    window.scrollByLines(SCROLL_LINE_COUNT * repeat);
+    window.scrollBy({
+      top: SCROLL_HORIZONTAL_PIXELS * repeat,
+      behavior: "smooth"
+    });
   },
   cmd_scrollLineUp: function(repetition) {
     const repeat = repetition == "" ? 1 : +repetition;
 
-    window.scrollByLines(-SCROLL_LINE_COUNT * repeat);
+    window.scrollBy({
+      top: -SCROLL_HORIZONTAL_PIXELS * repeat,
+      behavior: "smooth"
+    });
   },
   cmd_scrollFileBottom: function() {
     window.scrollTo(window.scrollX, document.body.scrollHeight);
@@ -93,7 +103,7 @@ function resetHistory() {
 }
 
 /**
- * Runs an action 
+ * Runs an action
  * @param {VimBindings~action} action
  */
 function runAction(action) {
@@ -119,7 +129,7 @@ document.addEventListener("keypress", event => {
 
   // see if the key combination matches one of our vim command combinations
   const action = actions.find(value => value.keyCombination == keyCombination);
-  
+
   // bail if not supported action
   if (!action) {
     //If the combination length is reached the max length, there are no possible actions left.

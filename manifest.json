@@ -2,22 +2,22 @@
   "manifest_version": 2,
   "name": "vimkeybindings",
   "description": "Vi(m) directional keybindings for Firefox.",
-  "author": "Dietrich Ayala",
-  "version": "2.0.2",
+  "author": "Jacob Strieb",
+  "version": "2.1.0",
   "applications": {
     "gecko": {
-      "id": "vimkeybindings@autonome.wordpress.com"
+      "id": "jacobstrieb@gmail.com"
     }
   },
   "background": {
     "scripts": ["background.js"]
   },
   "content_scripts": [
-    {   
+    {
       "matches":["<all_urls>"],
       "js": ["content-script.js"],
       "run_at": "document_start",
       "match_about_blank": true
-    }   
+    }
   ]
 }
