@@ -2,6 +2,12 @@
 
 Modified by Jacob Strieb.
 
+## Install
+
+Download and install the extension
+[here](https://github.com/jstrieb/vimkeybindings/releases/download/v2.1.0/vimkeybindings-2.1.0-fx.xpi).
+It is only available on this page, not on the Firefox add-on store.
+
 ## Supported Commands
 
 * h : scroll left
